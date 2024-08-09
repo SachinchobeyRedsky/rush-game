@@ -844,36 +844,35 @@ if (window.top === window.self) {
     $(".previous-button").hide();
   });
 }
+// document.addEventListener("DOMContentLoaded", () => {
+//   const viewContainer = document.getElementById("view");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const viewContainer = document.getElementById("view");
+//   // Disable scroll when touching inside the view container
+//   viewContainer.addEventListener(
+//     "touchstart",
+//     (event) => {
+//       event.preventDefault();
+//     },
+//     { passive: false }
+//   );
 
-  // Disable scroll when touching inside the view container
-  viewContainer.addEventListener(
-    "touchstart",
-    (event) => {
-      event.preventDefault();
-    },
-    { passive: false }
-  );
+//   viewContainer.addEventListener(
+//     "touchend",
+//     (event) => {
+//       event.preventDefault();
+//     },
+//     { passive: false }
+//   );
 
-  viewContainer.addEventListener(
-    "touchend",
-    (event) => {
-      event.preventDefault();
-    },
-    { passive: false }
-  );
-
-  // Allow scrolling when touching outside the view container
-  document.addEventListener(
-    "touchstart",
-    (event) => {
-      if (!viewContainer.contains(event.target)) {
-        // Allow default scrolling
-        document.body.style.overflow = "auto";
-      }
-    },
-    { passive: true }
-  );
-});
+//   // Allow scrolling when touching outside the view container
+//   document.addEventListener(
+//     "touchstart",
+//     (event) => {
+//       if (!viewContainer.contains(event.target)) {
+//         // Allow default scrolling
+//         document.body.style.overflow = "auto";
+//       }
+//     },
+//     { passive: true }
+//   );
+// });
